@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priya Pillai - Strategic Program Manager | PMP® | Fortune 500 Leader</title>
-    <meta name="description" content="19 years delivering $25M+ programs with 98% success. Program Management, PMO Leadership, Digital Transformation at Fortune 50 scale.">
+    <meta name="description" content="19 years delivering $25M+ programs with 98% success. Program Management, PMO Leadership, Digital Transformation at Fortune 500 scale.">
     
     <style>
         /* === FONT IMPORTS === */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
         
         /* === CSS VARIABLES === */
         :root {
             --primary-navy: #1A2332;
             --accent-teal: #0EA5A3;
-            --accent-coral: #FF6B6B;
-            --accent-gold: #FFB84D;
+            --accent-amber: #F59E0B;
+            --accent-gold: #EAB308;
             --bg-cream: #FAF8F5;
             --text-dark: #1A2332;
             --text-medium: #4A5568;
@@ -41,7 +41,7 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-dark);
             background: var(--bg-cream);
             line-height: 1.6;
@@ -50,9 +50,10 @@
         
         /* === TYPOGRAPHY === */
         h1, h2, h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
             line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         
         h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
@@ -81,7 +82,7 @@
         }
         
         nav .logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 900;
             color: var(--white);
@@ -97,7 +98,7 @@
         nav .nav-links a {
             color: var(--white);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.95rem;
             transition: color 0.3s ease;
         }
@@ -133,7 +134,7 @@
             bottom: 0;
             background: 
                 radial-gradient(circle at 20% 50%, rgba(14, 165, 163, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
             animation: pulse 15s ease-in-out infinite;
         }
         
@@ -160,7 +161,7 @@
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             border: 1px solid rgba(14, 165, 163, 0.3);
         }
@@ -172,8 +173,8 @@
         
         .hero-subtitle {
             font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-            color: var(--accent-teal);
-            font-weight: 600;
+            color: var(--accent-amber);
+            font-weight: 700;
             margin-bottom: 1.5rem;
             animation: fadeInUp 0.8s ease-out 0.2s backwards;
         }
@@ -212,14 +213,16 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 900;
-            color: var(--accent-coral);
-            font-family: 'Playfair Display', serif;
+            color: var(--accent-amber);
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.8;
             margin-top: 0.5rem;
+            font-weight: 600;
         }
         
         .cta-buttons {
@@ -233,7 +236,7 @@
             padding: 0.875rem 2rem;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
             transition: all 0.3s ease;
             display: inline-block;
@@ -291,7 +294,7 @@
         
         .section-tag {
             color: var(--accent-teal);
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -322,7 +325,7 @@
         }
         
         .about-text h3 {
-            color: var(--accent-coral);
+            color: var(--accent-amber);
             margin-bottom: 1rem;
         }
         
@@ -414,7 +417,7 @@
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         /* === PROJECTS SECTION === */
@@ -460,9 +463,10 @@
         }
         
         .project-section h4 {
-            color: var(--accent-coral);
+            color: var(--accent-amber);
             margin-bottom: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
         
         .results-grid {
@@ -476,20 +480,23 @@
             background: var(--white);
             padding: 1.5rem;
             border-radius: 12px;
-            border-left: 4px solid var(--accent-coral);
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-sm);
         }
         
         .result-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            color: var(--accent-coral);
-            font-family: 'Playfair Display', serif;
+            color: var(--primary-navy);
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: none;
         }
         
         .result-label {
-            color: var(--text-medium);
-            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-size: 0.95rem;
             margin-top: 0.5rem;
+            font-weight: 600;
         }
         
         /* === EXPERIENCE SECTION === */
@@ -545,7 +552,7 @@
         
         .experience-company {
             color: var(--accent-teal);
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             margin-top: 0.5rem;
         }
@@ -666,9 +673,9 @@
         }
         
         .contact-item a {
-            color: var(--accent-teal);
+            color: var(--accent-amber);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .contact-item a:hover {
@@ -692,6 +699,18 @@
         @media (max-width: 768px) {
             nav .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-navy);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            nav .nav-links.active {
+                display: flex;
             }
             
             .mobile-menu-btn {
@@ -767,7 +786,7 @@
                 <p class="hero-subtitle">Strategic Program Manager | PMP® | Agile Scrum Master</p>
                 <p class="hero-description">
                     19 years delivering $25M+ programs that transform organizations. Expert in PMO governance, 
-                    digital transformation, and cross-functional leadership at Fortune 50 scale. I don't just 
+                    digital transformation, and cross-functional leadership at Fortune 500 scale. I don't just 
                     manage projects—I architect transformation systems that make success inevitable.
                 </p>
                 <div class="cta-buttons">
@@ -802,7 +821,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">About Me</span>
-                <h2 class="section-title">Transforming Complexity into Competitive Advantage</h2>
+                <h2 class="section-title">Delivering Results at Fortune 500 Scale</h2>
             </div>
             
             <div class="about-content">
@@ -811,20 +830,21 @@
                     <p>
                         I'm the person you bring in when complexity threatens to derail transformation—and I turn 
                         it into competitive advantage. With 19 years of strategic program leadership spanning 
-                        Fortune 50 organizations and global BFSI environments, I've mastered the art of making 
+                        Fortune 500 organizations and global BFSI environments, I've mastered the art of making 
                         impossible timelines possible.
                     </p>
                     <p>
                         At Verizon, I led the $25M Productivity Enablement Program that transformed how the 
-                        enterprise onboards and enables 400+ delivery resources across 120+ applications. 
-                        The result? 40% faster onboarding, 12% cost savings, and 100% timeline adherence—with 
-                        zero business disruption across a 100,000+ user base.
+                        enterprise onboards and enables 400+ employees and 60+ vendors across 120+ applications. 
+                        Over 5+ years, I scaled the Global Capability Center (GCC) from 60 employees to 400+ employees 
+                        and 60+ vendors. The result? 40% faster onboarding, 12% cost savings, and 100% timeline 
+                        adherence—with zero business disruption across a 100,000+ user base.
                     </p>
                     <h3 style="margin-top: 2rem;">My Personality</h3>
                     <p>
                         I'm an <strong>enthusiastic learner</strong> who thrives in ambiguity, a <strong>go-getter</strong> 
                         who tackles challenges head-on, and a natural <strong>collaborator</strong> who brings 
-                        Finance, Legal, HR, Procurement, and C-suite stakeholders onto the same page.
+                        Finance, Legal, HR, Procurement, Compliance, and C-suite stakeholders onto the same page.
                     </p>
                 </div>
                 
@@ -832,9 +852,10 @@
                     <div class="highlight-box">
                         <h3 style="margin-bottom: 1rem;">What Sets Me Apart</h3>
                         <ul>
-                            <li>Cross-functional orchestration: Finance, Legal, HR, Procurement, C-suite alignment</li>
+                            <li>Cross-functional orchestration: Finance, Legal, HR, Procurement, Compliance, C-suite alignment</li>
+                            <li>Executive visibility: Real-time Tableau/Looker dashboards, Advanced Excel modeling, cost variance analysis driving 25% faster decisions</li>
                             <li>Complex compliance navigation: Global Enablement Factory, CPNI/GSAM, offshore protocols</li>
-                            <li>Executive visibility: Real-time Tableau/Looker dashboards driving 25% faster decisions</li>
+                            <li>Strategic vendor management: 60+ vendor ecosystem optimization achieving 100% SLA compliance</li>
                             <li>AI-driven automation: Leveraging Gemini, Copilot, ChatGPT for program management excellence</li>
                             <li>Hybrid delivery mastery: 98% sprint completion rates across Agile-Waterfall models</li>
                         </ul>
@@ -882,21 +903,22 @@
                 <div class="skill-card reveal">
                     <div class="skill-icon">💰</div>
                     <h3>Financial & Vendor Management</h3>
-                    <p>$25M+ budget oversight, cost optimization, vendor negotiations, procurement coordination, contract compliance</p>
+                    <p>$25M+ budget oversight, cost optimization, cost variance analysis, vendor negotiations, procurement coordination, strategic vendor ecosystem management, contract compliance</p>
                     <div class="skill-tags">
                         <span class="skill-tag">Budget Mgmt</span>
                         <span class="skill-tag">Vendor Relations</span>
+                        <span class="skill-tag">Cost Control</span>
                     </div>
                 </div>
                 
                 <div class="skill-card reveal">
                     <div class="skill-icon">📊</div>
                     <h3>Analytics & Tools</h3>
-                    <p>Tableau, Looker, Power BI, JIRA, Confluence, SQL, Excel mastery, executive dashboards</p>
+                    <p>Tableau, Looker, Power BI, JIRA, Confluence, SQL, Advanced Excel (pivot tables, macros, VBA, financial modeling), executive dashboards</p>
                     <div class="skill-tags">
                         <span class="skill-tag">BI Tools</span>
                         <span class="skill-tag">Data Viz</span>
-                        <span class="skill-tag">Analytics</span>
+                        <span class="skill-tag">Advanced Excel</span>
                     </div>
                 </div>
                 
@@ -938,10 +960,10 @@
                 <div class="project-header">
                     <h3>Productivity Enablement Program</h3>
                     <div class="project-meta">
-                        <span>📍 Verizon (Fortune 50)</span>
+                        <span>📍 Verizon (Fortune 500)</span>
                         <span>💰 $25M Budget</span>
-                        <span>👥 400+ Employees, 60+ Vendors</span>
-                        <span>⏱️ 18 Months</span>
+                        <span>👥 Scaled from 60 to 400+ Employees & 60+ Vendors</span>
+                        <span>⏱️ 5+ Years</span>
                     </div>
                 </div>
                 <div class="project-content">
@@ -952,7 +974,7 @@
                             employees and vendor partners was taking too long, creating bottlenecks that threatened 
                             project timelines and revenue generation. The scope included 120+ applications requiring 
                             complex access provisioning, hardware/software procurement, and navigating Global Enablement 
-                            Factory compliance across 8 departments.
+                            Factory compliance across 8 departments including Finance, Legal, HR, Procurement, IT, and Compliance.
                         </p>
                     </div>
                     
@@ -960,14 +982,15 @@
                         <h4>My Solution</h4>
                         <p>
                             I approached this as a systems problem, not a project problem. Rather than treating onboarding 
-                            as one-off fixes, I built a repeatable enablement framework across 5 phases:
+                            as one-off fixes, I built a repeatable enablement framework that scaled the GCC from 60 employees 
+                            to 400+ employees and 60+ vendors over 5+ years:
                         </p>
                         <ul style="margin-top: 1rem; padding-left: 2rem;">
                             <li>Requirements engineering & skills-to-tools mapping</li>
-                            <li>Stakeholder orchestration across Finance, HR, Legal, Procurement, IT</li>
+                            <li>Stakeholder orchestration across Finance, HR, Legal, Procurement, IT, Compliance</li>
                             <li>Proactive compliance navigation (CPNI/GSAM, Global Enablement Factory)</li>
-                            <li>Vendor ecosystem management treating 60+ partners strategically</li>
-                            <li>Executive dashboards in Tableau/Looker for real-time visibility</li>
+                            <li>Strategic vendor ecosystem management treating 60+ partners as ecosystem</li>
+                            <li>Executive dashboards in Tableau/Looker with Advanced Excel cost variance analysis</li>
                         </ul>
                     </div>
                     
@@ -990,6 +1013,14 @@
                                 <div class="result-number">25%</div>
                                 <div class="result-label">Faster Decisions</div>
                             </div>
+                            <div class="result-item">
+                                <div class="result-number">6.7x</div>
+                                <div class="result-label">GCC Scaling (60→400+)</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">100%</div>
+                                <div class="result-label">Vendor SLA Compliance</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1000,7 +1031,7 @@
                 <div class="project-header">
                     <h3>Enterprise Windows 10 Migration</h3>
                     <div class="project-meta">
-                        <span>📍 Verizon</span>
+                        <span>📍 Verizon (Fortune 500)</span>
                         <span>👥 6,000+ Users</span>
                         <span>⏱️ 12 Months</span>
                     </div>
@@ -1020,7 +1051,7 @@
                 <div class="project-header">
                     <h3>Absence Reporting Center (ARC) Transformation</h3>
                     <div class="project-meta">
-                        <span>📍 Verizon</span>
+                        <span>📍 Verizon (Fortune 500)</span>
                         <span>👥 100,000+ Global Users</span>
                         <span>⏱️ 24 Months</span>
                     </div>
@@ -1050,16 +1081,16 @@
                     <div class="experience-card">
                         <div class="experience-header">
                             <h3>Consultant - Program & Project Management</h3>
-                            <p class="experience-company">Verizon (Fortune 50 Telecommunications Leader)</p>
+                            <p class="experience-company">Verizon (Fortune 500 Telecommunications Leader)</p>
                             <p class="experience-duration">May 2016 – December 2025 | 9 years 8 months | Chennai, India</p>
                         </div>
                         <div class="experience-highlights">
                             <ul>
                                 <li>Directed $25M+ annual IT portfolios supporting 400+ employees and 60+ vendors with 98% success rate</li>
-                                <li>Led Productivity Enablement Program for 120+ applications, slashing onboarding time by 40%</li>
-                                <li>Built executive dashboards reducing C-suite decision-making turnaround by 25%</li>
+                                <li>Led 5+ year Productivity Enablement Program scaling GCC from 60 to 400+ employees across 120+ applications, slashing onboarding time by 40%</li>
+                                <li>Built executive dashboards with Advanced Excel cost variance modeling reducing C-suite decision-making turnaround by 25%</li>
                                 <li>Established PMO frameworks improving delivery predictability by 30% and reducing slippage by 35%</li>
-                                <li>Guided hybrid Agile-Waterfall teams to 98% sprint completion rate</li>
+                                <li>Orchestrated Finance, Legal, HR, Procurement, Compliance, and IT teams achieving 100% vendor SLA compliance</li>
                             </ul>
                         </div>
                     </div>
@@ -1069,7 +1100,7 @@
                     <div class="experience-card">
                         <div class="experience-header">
                             <h3>Business Analyst</h3>
-                            <p class="experience-company">Verizon</p>
+                            <p class="experience-company">Verizon (Fortune 500)</p>
                             <p class="experience-duration">February 2008 – April 2016 | 8 years 3 months | Chennai, India</p>
                         </div>
                         <div class="experience-highlights">
@@ -1180,7 +1211,7 @@
                     <div class="contact-item">
                         <div class="contact-icon">🔗</div>
                         <h4>LinkedIn</h4>
-                        <a href="https://linkedin.com/in/priyapillai-45942299" target="_blank">Connect with me</a>
+                        <a href="https://linkedin.com/in/priyapillai-45942299" target="_blank" rel="noopener noreferrer">Connect with me</a>
                     </div>
                     
                     <div class="contact-item">
@@ -1231,9 +1262,11 @@
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
         
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1246,8 +1279,8 @@
                         block: 'start'
                     });
                     // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        navLinks.style.display = 'none';
+                    if (window.innerWidth <= 768 && navLinks) {
+                        navLinks.classList.remove('active');
                     }
                 }
             });
