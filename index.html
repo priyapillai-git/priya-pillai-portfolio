@@ -1,1290 +1,684 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priya Pillai - Strategic Program Manager | PMP® | Fortune 500 Leader</title>
-    <meta name="description" content="19 years delivering $25M+ programs with 98% success. Program Management, PMO Leadership, Digital Transformation at Fortune 500 scale.">
-    
-    <style>
-        /* === FONT IMPORTS === */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
-        
-        /* === CSS VARIABLES === */
-        :root {
-            --primary-navy: #1A2332;
-            --accent-teal: #0EA5A3;
-            --accent-amber: #F59E0B;
-            --accent-gold: #EAB308;
-            --bg-cream: #FAF8F5;
-            --text-dark: #1A2332;
-            --text-medium: #4A5568;
-            --text-light: #718096;
-            --white: #FFFFFF;
-            --gradient-hero: linear-gradient(135deg, #1A2332 0%, #2D3E50 100%);
-            --gradient-accent: linear-gradient(135deg, #0EA5A3 0%, #0D8F8E 100%);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
-        }
-        
-        /* === RESET & BASE === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-        
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--text-dark);
-            background: var(--bg-cream);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* === TYPOGRAPHY === */
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-        
-        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3rem); }
-        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-        
-        /* === NAVIGATION === */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 35, 50, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        nav .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--white);
-            text-decoration: none;
-        }
-        
-        nav .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        nav .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-        
-        nav .nav-links a:hover {
-            color: var(--accent-teal);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* === HERO SECTION === */
-        .hero {
-            background: var(--gradient-hero);
-            color: var(--white);
-            padding: 8rem 2rem 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(14, 165, 163, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
-            animation: pulse 15s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-        }
-        
-        .hero .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-        }
-        
-        .hero-tag {
-            display: inline-block;
-            background: rgba(14, 165, 163, 0.2);
-            color: var(--accent-teal);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(14, 165, 163, 0.3);
-        }
-        
-        .hero h1 {
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-            color: var(--accent-amber);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.4s backwards;
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            animation: fadeInUp 0.8s ease-out 0.6s backwards;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent-amber);
-            font-family: 'Montserrat', sans-serif;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-top: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: var(--gradient-accent);
-            color: var(--white);
-            box-shadow: 0 4px 12px rgba(14, 165, 163, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(14, 165, 163, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-navy);
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* === SECTION BASE === */
-        section {
-            padding: 5rem 2rem;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-tag {
-            color: var(--accent-teal);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title {
-            margin-bottom: 1rem;
-        }
-        
-        .section-description {
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--text-medium);
-            font-size: 1.1rem;
-        }
-        
-        /* === ABOUT SECTION === */
-        #about {
-            background: var(--white);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-text h3 {
-            color: var(--accent-amber);
-            margin-bottom: 1rem;
-        }
-        
-        .about-text p {
-            color: var(--text-medium);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(14, 165, 163, 0.05) 0%, rgba(14, 165, 163, 0.1) 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-teal);
-        }
-        
-        .highlight-box ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .highlight-box li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-        
-        .highlight-box li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent-teal);
-            font-weight: bold;
-        }
-        
-        /* === SKILLS SECTION === */
-        #skills {
-            background: var(--bg-cream);
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--accent-teal);
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .skill-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-accent);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-navy);
-        }
-        
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .skill-tag {
-            background: rgba(14, 165, 163, 0.1);
-            color: var(--accent-teal);
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        /* === PROJECTS SECTION === */
-        #projects {
-            background: var(--white);
-        }
-        
-        .project-card {
-            background: var(--bg-cream);
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
-        }
-        
-        .project-header {
-            background: var(--gradient-hero);
-            color: var(--white);
-            padding: 2rem;
-        }
-        
-        .project-meta {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .project-content {
-            padding: 2rem;
-        }
-        
-        .project-section {
-            margin-bottom: 2rem;
-        }
-        
-        .project-section h4 {
-            color: var(--accent-amber);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .result-item {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-gold);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .result-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--primary-navy);
-            font-family: 'Montserrat', sans-serif;
-            text-shadow: none;
-        }
-        
-        .result-label {
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
-            font-weight: 600;
-        }
-        
-        /* === EXPERIENCE SECTION === */
-        #experience {
-            background: var(--bg-cream);
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--gradient-accent);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding-left: 2rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3.5rem;
-            top: 0.5rem;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--accent-teal);
-            border: 4px solid var(--bg-cream);
-            box-shadow: 0 0 0 3px var(--accent-teal);
-        }
-        
-        .experience-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .experience-header h3 {
-            color: var(--primary-navy);
-            font-size: 1.5rem;
-        }
-        
-        .experience-company {
-            color: var(--accent-teal);
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
-        
-        .experience-duration {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-        
-        .experience-highlights {
-            margin-top: 1.5rem;
-        }
-        
-        .experience-highlights ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .experience-highlights li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: var(--text-medium);
-        }
-        
-        .experience-highlights li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent-teal);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        /* === CERTIFICATIONS SECTION === */
-        #certifications {
-            background: var(--white);
-        }
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .cert-card {
-            background: var(--bg-cream);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            border-top: 3px solid var(--accent-gold);
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .cert-badge {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .cert-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .cert-issuer {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        
-        /* === CONTACT SECTION === */
-        #contact {
-            background: var(--gradient-hero);
-            color: var(--white);
-        }
-        
-        .contact-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-item h4 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-item a {
-            color: var(--accent-amber);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-        
-        /* === FOOTER === */
-        footer {
-            background: var(--primary-navy);
-            color: var(--white);
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        footer p {
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-        
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            nav .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--primary-navy);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: var(--shadow-lg);
-            }
-            
-            nav .nav-links.active {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 6rem 1.5rem 4rem;
-            }
-            
-            .hero-stats {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            section {
-                padding: 3rem 1.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .timeline {
-                padding-left: 2rem;
-            }
-            
-            .timeline-item::before {
-                left: -2.5rem;
-            }
-        }
-        
-        /* === SMOOTH SCROLL REVEAL === */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Priya Pillai – Senior Project Manager | PMP® | RPA & Power Platform | BFSI Automation | 19+ Years Leading Enterprise Transformation"/>
+<title>Priya Pillai · Senior Project Manager | PMP® | BFSI Automation Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0b1526;
+  --navy-mid:#162035;
+  --navy-light:#1e2d4a;
+  --teal:#0cb8b0;
+  --teal-light:#2dd4cb;
+  --teal-subtle:#e4f8f7;
+  --gold:#c8903a;
+  --gold-light:#e8b254;
+  --text-primary:#111827;
+  --text-secondary:#4b5563;
+  --text-muted:#6b7280;
+  --surface:#f8f9fb;
+  --white:#ffffff;
+  --border:#e5e7eb;
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:16px;
+  --transition:all 0.25s ease;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',sans-serif;color:var(--text-primary);background:var(--white);line-height:1.65;font-size:16px;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,21,38,0.96);backdrop-filter:blur(14px);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:66px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--teal);letter-spacing:0.02em;text-decoration:none}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:var(--transition)}
+.nav-links a:hover{color:var(--teal-light)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:white;font-size:1.4rem}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:66px}
+.hero-bg-circle{position:absolute;border-radius:50%;pointer-events:none}
+.hero-bg-circle.c1{width:600px;height:600px;right:-100px;top:-100px;border:1px solid rgba(14,184,176,0.07)}
+.hero-bg-circle.c2{width:350px;height:350px;right:80px;top:80px;border:1px solid rgba(14,184,176,0.05)}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(14,184,176,0.07) 0%,transparent 70%);right:5%;top:50%;transform:translateY(-50%);pointer-events:none}
+.hero-inner{max-width:1120px;margin:0 auto;padding:6rem 5vw 5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:9px;background:rgba(14,184,176,0.1);border:1px solid rgba(14,184,176,0.22);color:var(--teal-light);font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:1.75rem}
+.hero-tag-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
+h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,6.5vw,5.4rem);font-weight:800;color:var(--white);line-height:1.0;letter-spacing:-0.02em;margin-bottom:0.6rem}
+h1.hero-name em{color:var(--teal);font-style:italic;display:block}
+.hero-title{font-size:0.95rem;color:rgba(255,255,255,0.55);font-weight:500;margin-bottom:0.7rem;letter-spacing:0.04em}
+.hero-company{display:inline-flex;align-items:center;gap:10px;color:var(--gold-light);font-size:0.9rem;font-weight:600;margin-bottom:2.2rem}
+.hero-company::before{content:'';width:30px;height:2px;background:var(--gold);border-radius:1px}
+.hero-desc{font-size:1.0rem;color:rgba(255,255,255,0.65);max-width:520px;line-height:1.8;margin-bottom:2.75rem;font-weight:400}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{display:inline-block;background:var(--teal);color:var(--navy);font-family:'Mulish',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border-radius:100px;text-decoration:none;transition:var(--transition)}
+.btn-primary:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 20px rgba(14,184,176,0.3)}
+.btn-ghost{display:inline-block;background:transparent;color:rgba(255,255,255,0.8);font-family:'Mulish',sans-serif;font-weight:600;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:13px 32px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);text-decoration:none;transition:var(--transition)}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);color:white;transform:translateY(-1px)}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.stat-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);padding:1.75rem 1.25rem;text-align:center;transition:var(--transition)}
+.stat-card:hover{border-color:rgba(14,184,176,0.2);background:rgba(14,184,176,0.04)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;color:var(--teal);line-height:1;margin-bottom:0.4rem}
+.stat-label{font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
+
+/* ── SHARED SECTION STYLES ── */
+section{padding:5.5rem 5vw}
+.section-inner{max-width:1120px;margin:0 auto}
+.section-kicker{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem}
+.section-heading{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3rem);font-weight:800;color:var(--text-primary);line-height:1.1;margin-bottom:1.5rem}
+.section-lead{font-size:1.02rem;color:var(--text-secondary);max-width:640px;line-height:1.8;font-weight:400}
+.divider{width:52px;height:3px;background:var(--teal);border-radius:2px;margin-bottom:1.5rem}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.about-right p{font-size:0.97rem;color:var(--text-secondary);line-height:1.85;margin-bottom:1.25rem;font-weight:400}
+.about-pillars{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.pillar{background:var(--surface);border-radius:var(--radius-md);padding:1.1rem 1.2rem;border-left:3px solid var(--teal)}
+.pillar strong{display:block;font-size:0.78rem;font-weight:700;color:var(--text-primary);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.08em}
+.pillar span{font-size:0.82rem;color:var(--text-secondary);font-weight:400}
+.about-highlight{background:var(--navy);border-radius:var(--radius-lg);padding:2.25rem;color:white}
+.about-highlight h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--teal-light);margin-bottom:1.25rem}
+.about-highlight p{font-size:0.9rem;color:rgba(255,255,255,0.7);line-height:1.85;margin-bottom:1.1rem;font-weight:400}
+.about-highlight p:last-child{margin-bottom:0}
+.about-highlight strong{color:var(--teal-light);font-weight:600}
+
+/* ── SKILLS ── */
+.skills-section{background:var(--surface)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;margin-top:3rem}
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;transition:var(--transition)}
+.skill-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 10px 28px rgba(14,184,176,0.08)}
+.skill-icon{width:42px;height:42px;border-radius:var(--radius-md);background:var(--teal-subtle);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;font-size:1.15rem}
+.skill-card h3{font-size:0.8rem;font-weight:700;color:var(--text-primary);margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.1em}
+.skill-card p{font-size:0.875rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.9rem;font-weight:400}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:0.71rem;font-weight:600;padding:3px 11px;border-radius:100px;background:var(--surface);color:var(--text-secondary);border:1px solid var(--border);letter-spacing:0.03em}
+.tag.teal{background:var(--teal-subtle);color:#0a706b;border-color:rgba(14,184,176,0.2)}
+.tag.gold{background:#fdf4e7;color:#8a5c1a;border-color:rgba(201,147,58,0.25)}
+
+/* ── PROJECTS ── */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem}
+.project-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)}
+.project-card:hover{border-color:var(--teal);box-shadow:0 14px 36px rgba(0,0,0,0.08)}
+.project-header{background:var(--navy);padding:1.6rem;position:relative;overflow:hidden}
+.project-header::after{content:'';position:absolute;bottom:-20px;right:-20px;width:90px;height:90px;border-radius:50%;background:rgba(14,184,176,0.07)}
+.project-org{font-size:0.71rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem}
+.project-header h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:white;line-height:1.3}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;padding:1rem 1.5rem;border-bottom:1px solid var(--border)}
+.meta-badge{font-size:0.72rem;font-weight:600;color:var(--text-muted);display:flex;align-items:center;gap:5px}
+.project-body{padding:1.5rem}
+.project-body p{font-size:0.875rem;color:var(--text-secondary);line-height:1.75;margin-bottom:1rem;font-weight:400}
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1rem}
+.impact-cell{text-align:center;padding:0.85rem 0.5rem;background:var(--surface);border-radius:var(--radius-md)}
+.impact-cell .num{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:800;color:var(--teal);display:block;line-height:1}
+.impact-cell .lbl{font-size:0.67rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:4px;display:block;font-weight:600}
+
+/* ── EXPERIENCE ── */
+.experience-section{background:var(--navy)}
+.experience-section .section-heading{color:white}
+.experience-section .section-kicker{color:var(--teal-light)}
+.experience-section .divider{background:var(--teal)}
+.timeline{position:relative;margin-top:3rem;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:rgba(14,184,176,0.18)}
+.timeline-item{position:relative;padding:0 0 3.25rem 2.75rem}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-0.45rem;top:0.45rem;width:14px;height:14px;border-radius:50%;background:var(--teal);border:2px solid var(--navy)}
+.timeline-item.current .timeline-dot{animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(14,184,176,0.5)}60%{box-shadow:0 0 0 7px rgba(14,184,176,0)}}
+.timeline-period{font-size:0.75rem;color:var(--teal-light);font-weight:700;letter-spacing:0.08em;margin-bottom:0.5rem;text-transform:uppercase}
+.timeline-role{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:white;line-height:1.2;margin-bottom:0.25rem}
+.timeline-company{font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1.1rem;display:flex;align-items:center;gap:8px;font-weight:500}
+.current-badge{font-size:0.68rem;font-weight:700;background:rgba(14,184,176,0.18);color:var(--teal-light);padding:3px 11px;border-radius:100px;border:1px solid rgba(14,184,176,0.3);text-transform:uppercase;letter-spacing:0.06em}
+.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
+.timeline-bullets li{font-size:0.875rem;color:rgba(255,255,255,0.62);line-height:1.7;padding-left:1.1rem;position:relative;font-weight:400}
+.timeline-bullets li::before{content:'–';position:absolute;left:0;color:var(--teal);font-weight:700}
+.timeline-projects{margin-top:0.9rem;display:flex;flex-wrap:wrap;gap:6px}
+.proj-tag{font-size:0.71rem;font-weight:600;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);padding:3px 11px;border-radius:100px}
+
+/* ── CERTIFICATIONS ── */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:3rem}
+.cert-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;transition:var(--transition)}
+.cert-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,147,58,0.1)}
+.cert-icon{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem}
+.cert-card h3{font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.05em}
+.cert-card p{font-size:0.78rem;color:var(--text-muted);font-weight:500}
+
+/* ── CONTACT ── */
+.contact-section{background:var(--navy)}
+.contact-inner{max-width:1120px;margin:0 auto;padding:5.5rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.contact-left h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;color:white;line-height:1.1;margin-bottom:1.1rem}
+.contact-left h2 em{color:var(--teal);font-style:italic}
+.contact-left p{font-size:0.97rem;color:rgba(255,255,255,0.6);line-height:1.8;font-weight:400}
+.contact-cards{display:flex;flex-direction:column;gap:1rem}
+.contact-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1.1rem;transition:var(--transition);text-decoration:none}
+.contact-card:hover{border-color:rgba(14,184,176,0.35);background:rgba(14,184,176,0.06)}
+.contact-card-icon{width:42px;height:42px;border-radius:50%;background:rgba(14,184,176,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-card-text span{display:block;font-size:0.69rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;font-weight:700}
+.contact-card-text strong,.contact-card-text a{color:white;font-size:0.92rem;font-weight:500;text-decoration:none;transition:var(--transition)}
+.contact-card:hover .contact-card-text a,.contact-card:hover .contact-card-text strong{color:var(--teal-light)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);padding:2rem 5vw;text-align:center}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.28);font-weight:500}
+footer a{color:rgba(255,255,255,0.45);text-decoration:none;transition:var(--transition)}
+footer a:hover{color:var(--teal-light)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .about-pillars{grid-template-columns:1fr 1fr}
+  .contact-inner{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:640px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:66px;left:0;right:0;background:rgba(11,21,38,0.98);padding:1.5rem 5vw;gap:1.25rem}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  .about-pillars{grid-template-columns:1fr}
+  section{padding:3.5rem 5vw}
+  h1.hero-name{font-size:2.8rem}
+}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">PP</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-tag">🚀 Immediate Joiner | Fortune 500 Ready</span>
-                <h1>Priya Pillai</h1>
-                <p class="hero-subtitle">Strategic Program Manager | PMP® | Agile Scrum Master</p>
-                <p class="hero-description">
-                    19 years delivering $25M+ programs that transform organizations. Expert in PMO governance, 
-                    digital transformation, and cross-functional leadership at Fortune 500 scale. I don't just 
-                    manage projects—I architect transformation systems that make success inevitable.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                </div>
-            </div>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">$25M+</div>
-                    <div class="stat-label">Programs Delivered</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">400+</div>
-                    <div class="stat-label">People Led</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">Efficiency Gains</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">PP</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag">About Me</span>
-                <h2 class="section-title">Delivering Results at Fortune 500 Scale</h2>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text reveal">
-                    <h3>Who I Am</h3>
-                    <p>
-                        I'm the person you bring in when complexity threatens to derail transformation—and I turn 
-                        it into competitive advantage. With 19 years of strategic program leadership spanning 
-                        Fortune 500 organizations and global BFSI environments, I've mastered the art of making 
-                        impossible timelines possible.
-                    </p>
-                    <p>
-                        At Verizon, I led the $25M Productivity Enablement Program that transformed how the 
-                        enterprise onboards and enables 400+ employees and 60+ vendors across 120+ applications. 
-                        Over 5+ years, I scaled the Global Capability Center (GCC) from 60 employees to 400+ employees 
-                        and 60+ vendors. The result? 40% faster onboarding, 12% cost savings, and 100% timeline 
-                        adherence—with zero business disruption across a 100,000+ user base.
-                    </p>
-                    <h3 style="margin-top: 2rem;">My Personality</h3>
-                    <p>
-                        I'm an <strong>enthusiastic learner</strong> who thrives in ambiguity, a <strong>go-getter</strong> 
-                        who tackles challenges head-on, and a natural <strong>collaborator</strong> who brings 
-                        Finance, Legal, HR, Procurement, Compliance, and C-suite stakeholders onto the same page.
-                    </p>
-                </div>
-                
-                <div class="reveal">
-                    <div class="highlight-box">
-                        <h3 style="margin-bottom: 1rem;">What Sets Me Apart</h3>
-                        <ul>
-                            <li>Cross-functional orchestration: Finance, Legal, HR, Procurement, Compliance, C-suite alignment</li>
-                            <li>Executive visibility: Real-time Tableau/Looker dashboards, Advanced Excel modeling, cost variance analysis driving 25% faster decisions</li>
-                            <li>Complex compliance navigation: Global Enablement Factory, CPNI/GSAM, offshore protocols</li>
-                            <li>Strategic vendor management: 60+ vendor ecosystem optimization achieving 100% SLA compliance</li>
-                            <li>AI-driven automation: Leveraging Gemini, Copilot, ChatGPT for program management excellence</li>
-                            <li>Hybrid delivery mastery: 98% sprint completion rates across Agile-Waterfall models</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Senior Project Manager · Canarys Automation</div>
+      <h1 class="hero-name">Priya<em>Pillai</em></h1>
+      <p class="hero-title">PMP® &nbsp;·&nbsp; Agile Scrum Master &nbsp;·&nbsp; PSPO &nbsp;·&nbsp; ICP Agile Coach</p>
+      <p class="hero-company">Canarys Automation Ltd, Bengaluru</p>
+      <p class="hero-desc">19+ years driving enterprise transformation across BFSI, RPA modernisation, and Power Platform delivery. I don't just manage programs — I build the governance systems that make complex, multi-stakeholder transformation succeed at scale.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">Explore My Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">19+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$25M+</div>
+        <div class="stat-label">Portfolios Directed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Success Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">400+</div>
+        <div class="stat-label">People Led</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag">Expertise</span>
-                <h2 class="section-title">Skills That Solve Real Business Problems</h2>
-                <p class="section-description">
-                    My skill set is designed to solve the real-world problems Fortune 500 companies face: 
-                    fragmented stakeholders, compliance complexity, vendor chaos, and delivering faster with fewer resources.
-                </p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🎯</div>
-                    <h3>Strategic Leadership</h3>
-                    <p>Program & portfolio management, PMO governance, strategic planning, stakeholder orchestration, C-suite liaison</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PMP®</span>
-                        <span class="skill-tag">PMO</span>
-                        <span class="skill-tag">Strategy</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🚀</div>
-                    <h3>Delivery Excellence</h3>
-                    <p>Agile, Scrum, Kanban, Waterfall, hybrid methodologies, RAID management, governance frameworks</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Scrum Master</span>
-                        <span class="skill-tag">Agile Coach</span>
-                        <span class="skill-tag">PSPO</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card reveal">
-                    <div class="skill-icon">💰</div>
-                    <h3>Financial & Vendor Management</h3>
-                    <p>$25M+ budget oversight, cost optimization, cost variance analysis, vendor negotiations, procurement coordination, strategic vendor ecosystem management, contract compliance</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Budget Mgmt</span>
-                        <span class="skill-tag">Vendor Relations</span>
-                        <span class="skill-tag">Cost Control</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card reveal">
-                    <div class="skill-icon">📊</div>
-                    <h3>Analytics & Tools</h3>
-                    <p>Tableau, Looker, Power BI, JIRA, Confluence, SQL, Advanced Excel (pivot tables, macros, VBA, financial modeling), executive dashboards</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">BI Tools</span>
-                        <span class="skill-tag">Data Viz</span>
-                        <span class="skill-tag">Advanced Excel</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🤖</div>
-                    <h3>AI & Automation</h3>
-                    <p>Microsoft Copilot, ChatGPT, Google Gemini, Claude - AI-driven RAID management, status automation</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GenAI</span>
-                        <span class="skill-tag">Automation</span>
-                        <span class="skill-tag">Innovation</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🔒</div>
-                    <h3>Compliance & Risk</h3>
-                    <p>Global Enablement Factory, CPNI/GSAM protocols, offshore compliance, 100% audit success record</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Compliance</span>
-                        <span class="skill-tag">Risk Mgmt</span>
-                        <span class="skill-tag">Governance</span>
-                    </div>
-                </div>
-            </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <span class="section-kicker">About Me</span>
+    <div class="divider"></div>
+    <h2 class="section-heading">Delivering Results<br>at Enterprise Scale</h2>
+    <div class="about-grid">
+      <div class="about-right">
+        <p>I'm a high-velocity Delivery Leader and PMO Architect who thrives where complexity meets scale. With 19+ years of experience spanning BFSI, telecommunications, and enterprise automation, I've built governance systems that make transformation inevitable.</p>
+        <p>At Verizon, I directed $25M+ annual IT portfolios across 120+ applications and 60+ vendor partners — governing scope, budget, delivery milestones, and executive reporting for one of the world's largest telecoms over nearly 18 years.</p>
+        <p>Today at Canarys Automation, I lead end-to-end delivery of enterprise automation programs within the BFSI practice — managing concurrent RPA modernisation and Power Platform transformation engagements for international clients, driving seamless delivery from initiation through hypercare.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <strong>RPA &amp; Power Platform</strong>
+            <span>UiPath · Power Automate · Power Apps · Dataverse</span>
+          </div>
+          <div class="pillar">
+            <strong>BFSI Specialisation</strong>
+            <span>Insurance · Loan origination · Compliance</span>
+          </div>
+          <div class="pillar">
+            <strong>PMO Leadership</strong>
+            <span>RAID · Stage-gates · KPI dashboards · RACI</span>
+          </div>
+          <div class="pillar">
+            <strong>Agile &amp; Hybrid Delivery</strong>
+            <span>Scrum · SAFe · Waterfall · 98% sprint completion</span>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="about-highlight">
+        <h3>What I've Delivered</h3>
+        <p><strong>Portfolio Mastery:</strong> Directed $25M+ annual IT portfolios coordinating 400+ employees and 60+ vendors with a 98% success rate across all program phases.</p>
+        <p><strong>Transformation at Scale:</strong> Led enterprise-wide migrations for 100,000+ users with 100% timeline adherence and zero business disruption.</p>
+        <p><strong>Efficiency Engineering:</strong> Conceptualised and led a Productivity Enablement Program for 120+ applications, slashing onboarding cycle times by 40%.</p>
+        <p><strong>Executive Influence:</strong> Built real-time automated dashboards reducing C-suite decision-making turnaround by 25%.</p>
+        <p><strong>AI-Driven Governance:</strong> Integrate Gemini, Copilot, and ChatGPT to optimise RAID management and status reporting, focusing on strategic alignment over admin work.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Flagship Projects That Moved the Needle</h2>
-            </div>
-            
-            <!-- Project 1: Productivity Enablement -->
-            <div class="project-card reveal">
-                <div class="project-header">
-                    <h3>Productivity Enablement Program</h3>
-                    <div class="project-meta">
-                        <span>📍 Verizon (Fortune 500)</span>
-                        <span>💰 $25M Budget</span>
-                        <span>👥 Scaled from 60 to 400+ Employees & 60+ Vendors</span>
-                        <span>⏱️ 5+ Years</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-section">
-                        <h4>The Challenge</h4>
-                        <p>
-                            Verizon's offshore delivery center faced a critical productivity crisis: onboarding new 
-                            employees and vendor partners was taking too long, creating bottlenecks that threatened 
-                            project timelines and revenue generation. The scope included 120+ applications requiring 
-                            complex access provisioning, hardware/software procurement, and navigating Global Enablement 
-                            Factory compliance across 8 departments including Finance, Legal, HR, Procurement, IT, and Compliance.
-                        </p>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>My Solution</h4>
-                        <p>
-                            I approached this as a systems problem, not a project problem. Rather than treating onboarding 
-                            as one-off fixes, I built a repeatable enablement framework that scaled the GCC from 60 employees 
-                            to 400+ employees and 60+ vendors over 5+ years:
-                        </p>
-                        <ul style="margin-top: 1rem; padding-left: 2rem;">
-                            <li>Requirements engineering & skills-to-tools mapping</li>
-                            <li>Stakeholder orchestration across Finance, HR, Legal, Procurement, IT, Compliance</li>
-                            <li>Proactive compliance navigation (CPNI/GSAM, Global Enablement Factory)</li>
-                            <li>Strategic vendor ecosystem management treating 60+ partners as ecosystem</li>
-                            <li>Executive dashboards in Tableau/Looker with Advanced Excel cost variance analysis</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>Measurable Impact</h4>
-                        <div class="results-grid">
-                            <div class="result-item">
-                                <div class="result-number">40%</div>
-                                <div class="result-label">Faster Onboarding Time</div>
-                            </div>
-                            <div class="result-item">
-                                <div class="result-number">12%</div>
-                                <div class="result-label">Cost Savings ($3M+)</div>
-                            </div>
-                            <div class="result-item">
-                                <div class="result-number">100%</div>
-                                <div class="result-label">Timeline Adherence</div>
-                            </div>
-                            <div class="result-item">
-                                <div class="result-number">25%</div>
-                                <div class="result-label">Faster Decisions</div>
-                            </div>
-                            <div class="result-item">
-                                <div class="result-number">6.7x</div>
-                                <div class="result-label">GCC Scaling (60→400+)</div>
-                            </div>
-                            <div class="result-item">
-                                <div class="result-number">100%</div>
-                                <div class="result-label">Vendor SLA Compliance</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 2: Windows 10 Migration -->
-            <div class="project-card reveal">
-                <div class="project-header">
-                    <h3>Enterprise Windows 10 Migration</h3>
-                    <div class="project-meta">
-                        <span>📍 Verizon (Fortune 500)</span>
-                        <span>👥 6,000+ Users</span>
-                        <span>⏱️ 12 Months</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <p>
-                        Led mission-critical OS migration for 6,000+ India delivery center users, orchestrating 
-                        pilot waves, application compatibility testing across 100+ enterprise tools, and production 
-                        readiness validation. Achieved 100% timeline adherence with zero business disruption, 
-                        eliminating security vulnerabilities while modernizing the productivity environment.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Project 3: ARC Transformation -->
-            <div class="project-card reveal">
-                <div class="project-header">
-                    <h3>Absence Reporting Center (ARC) Transformation</h3>
-                    <div class="project-meta">
-                        <span>📍 Verizon (Fortune 500)</span>
-                        <span>👥 100,000+ Global Users</span>
-                        <span>⏱️ 24 Months</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <p>
-                        Supported PMO delivery for enterprise-wide absence management platform migration serving 
-                        100,000+ employees globally. Coordinated 15+ UAT cycles annually (reducing defects by 20%), 
-                        ensured 100% regulatory compliance with FMLA and union agreements, and strengthened 
-                        documentation processes that reduced audit findings by 40%.
-                    </p>
-                </div>
-            </div>
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="section-inner">
+    <span class="section-kicker">Expertise</span>
+    <div class="divider"></div>
+    <h2 class="section-heading">Skills That Solve Real Problems</h2>
+    <p class="section-lead">A skill set built for the challenges enterprises actually face: fragmented stakeholders, compliance complexity, automation at scale, and delivering faster with fewer resources.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3>RPA &amp; Power Platform</h3>
+        <p>Delivery leadership for UiPath and Power Automate programs — from PoC through hypercare — including workflow automation and Dataverse architecture governance for insurance and BFSI clients.</p>
+        <div class="skill-tags">
+          <span class="tag teal">UiPath</span>
+          <span class="tag teal">Power Automate</span>
+          <span class="tag teal">Power Apps</span>
+          <span class="tag teal">Dataverse</span>
+          <span class="tag">PAD</span>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag">Career Journey</span>
-                <h2 class="section-title">19 Years of Progressive Leadership</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>Consultant - Program & Project Management</h3>
-                            <p class="experience-company">Verizon (Fortune 500 Telecommunications Leader)</p>
-                            <p class="experience-duration">May 2016 – December 2025 | 9 years 8 months | Chennai, India</p>
-                        </div>
-                        <div class="experience-highlights">
-                            <ul>
-                                <li>Directed $25M+ annual IT portfolios supporting 400+ employees and 60+ vendors with 98% success rate</li>
-                                <li>Led 5+ year Productivity Enablement Program scaling GCC from 60 to 400+ employees across 120+ applications, slashing onboarding time by 40%</li>
-                                <li>Built executive dashboards with Advanced Excel cost variance modeling reducing C-suite decision-making turnaround by 25%</li>
-                                <li>Established PMO frameworks improving delivery predictability by 30% and reducing slippage by 35%</li>
-                                <li>Orchestrated Finance, Legal, HR, Procurement, Compliance, and IT teams achieving 100% vendor SLA compliance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item reveal">
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>Business Analyst</h3>
-                            <p class="experience-company">Verizon (Fortune 500)</p>
-                            <p class="experience-duration">February 2008 – April 2016 | 8 years 3 months | Chennai, India</p>
-                        </div>
-                        <div class="experience-highlights">
-                            <ul>
-                                <li>Supported PMO delivery for initiatives impacting 100,000+ users globally</li>
-                                <li>Coordinated 15+ UAT cycles annually, reducing post-release defects by 20%</li>
-                                <li>Strengthened documentation processes, reducing audit findings by 40%</li>
-                                <li>Acted as bridge between business and technology teams, reducing rework by 25%</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item reveal">
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>Business Analyst</h3>
-                            <p class="experience-company">Intellect Design Arena (Banking Software)</p>
-                            <p class="experience-duration">September 2006 – December 2007 | 1 year 4 months | Chennai, India</p>
-                        </div>
-                        <div class="experience-highlights">
-                            <ul>
-                                <li>Led team of 20 delivering Loan Origination System for TISCO Bank Thailand with 100% compliance</li>
-                                <li>Optimized execution for 1,648+ THB retail loan portfolio, reducing delivery time by 20%</li>
-                                <li>Minimized UAT rework by 25% through standardized validation workflows</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🎯</div>
+        <h3>Strategic Program Leadership</h3>
+        <p>End-to-end program and portfolio management, PMO governance, strategic planning, stakeholder orchestration, and C-suite liaison at Fortune 500 scale.</p>
+        <div class="skill-tags">
+          <span class="tag teal">PMO Architecture</span>
+          <span class="tag">PMP®</span>
+          <span class="tag">Portfolio Mgmt</span>
+          <span class="tag">Stage-gates</span>
+          <span class="tag">RAID</span>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag">Credentials</span>
-                <h2 class="section-title">World-Class Certifications</h2>
-                <p class="section-description">
-                    Industry-recognized credentials validating expertise in both traditional and agile program management
-                </p>
-            </div>
-            
-            <div class="cert-grid">
-                <div class="cert-card reveal">
-                    <div class="cert-badge">🏆</div>
-                    <h3>PMP®</h3>
-                    <p class="cert-issuer">Project Management Institute</p>
-                </div>
-                
-                <div class="cert-card reveal">
-                    <div class="cert-badge">⚡</div>
-                    <h3>Agile Scrum Master</h3>
-                    <p class="cert-issuer">EXIN Certified</p>
-                </div>
-                
-                <div class="cert-card reveal">
-                    <div class="cert-badge">📦</div>
-                    <h3>PSPO I</h3>
-                    <p class="cert-issuer">Professional Scrum Product Owner</p>
-                </div>
-                
-                <div class="cert-card reveal">
-                    <div class="cert-badge">🎯</div>
-                    <h3>ICP Agile Coach</h3>
-                    <p class="cert-issuer">ICAgile Certified</p>
-                </div>
-                
-                <div class="cert-card reveal">
-                    <div class="cert-badge">🤖</div>
-                    <h3>GenAI Mastermind</h3>
-                    <p class="cert-issuer">Generative AI Certification</p>
-                </div>
-                
-                <div class="cert-card reveal">
-                    <div class="cert-badge">📱</div>
-                    <h3>Digital Marketing</h3>
-                    <p class="cert-issuer">Google Certified</p>
-                </div>
-            </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🚀</div>
+        <h3>Agile &amp; Hybrid Delivery</h3>
+        <p>Scrum, Kanban, SAFe, and hybrid Agile-Waterfall methodologies. 98% sprint completion rate. Sprint reviews, steering committees, and milestone sign-off sessions with senior stakeholders.</p>
+        <div class="skill-tags">
+          <span class="tag teal">Scrum Master</span>
+          <span class="tag teal">PSPO</span>
+          <span class="tag">Agile Coach</span>
+          <span class="tag">Kanban</span>
+          <span class="tag">SAFe</span>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-content reveal">
-                <h2>Let's Create Impact Together</h2>
-                <p style="font-size: 1.1rem; margin-top: 1rem; opacity: 0.9;">
-                    I'm an immediate joiner ready to bring transformation to your organization. 
-                    Whether you're a Fortune 500 company, recruiter, or business leader—let's connect.
-                </p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <h4>Email</h4>
-                        <a href="mailto:ppspriya@hotmail.com">ppspriya@hotmail.com</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <h4>Phone</h4>
-                        <a href="tel:+919789972860">+91-9789972860</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🔗</div>
-                        <h4>LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/priya-pillai-45942299/" target="_blank" rel="noopener noreferrer">Connect with me</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <h4>Location</h4>
-                        <p>Chennai, Tamil Nadu, India</p>
-                        <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem;">Open to Pan-India & Global relocation</p>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 3rem;">
-                    <a href="mailto:ppspriya@hotmail.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
-                        Schedule a Conversation
-                    </a>
-                </div>
-            </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">💰</div>
+        <h3>Financial &amp; Vendor Management</h3>
+        <p>$25M+ budget oversight, cost optimisation, cost variance analysis, vendor negotiations, procurement coordination, and 60+ vendor ecosystem management achieving 100% SLA compliance.</p>
+        <div class="skill-tags">
+          <span class="tag gold">Budget Oversight</span>
+          <span class="tag gold">Vendor Relations</span>
+          <span class="tag">Cost Control</span>
+          <span class="tag">Ariba</span>
+          <span class="tag">SLA Governance</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Priya Pillai. All rights reserved. | Strategic Program Manager | PMP® | Agile Scrum Master</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Analytics &amp; Reporting</h3>
+        <p>Executive dashboards, Power BI, JIRA, Confluence, Advanced Excel (pivots, macros, VBA, financial modelling), and real-time reporting that cuts C-suite decision time by 25%.</p>
+        <div class="skill-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">JIRA</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">Advanced Excel</span>
+          <span class="tag teal">Executive Dashboards</span>
         </div>
-    </footer>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">✨</div>
+        <h3>Generative AI &amp; Innovation</h3>
+        <p>Certified GenAI practitioner. Applies Copilot, ChatGPT, Gemini, and local LLM tooling to program management workflows, RAID automation, and documentation generation.</p>
+        <div class="skill-tags">
+          <span class="tag teal">GenAI Mastermind</span>
+          <span class="tag">Copilot</span>
+          <span class="tag">ChatGPT</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">Ollama / Llama</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- JavaScript -->
-    <script>
-        // Smooth scroll reveal animation
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            reveals.forEach(element => {
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', reveal);
-        reveal(); // Initial check
-        
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if (mobileMenuBtn && navLinks) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
-        
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768 && navLinks) {
-                        navLinks.classList.remove('active');
-                    }
-                }
-            });
-        });
-    </script>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <span class="section-kicker">Portfolio</span>
+    <div class="divider"></div>
+    <h2 class="section-heading">Programs That Moved the Needle</h2>
+    <p class="section-lead">A selection of enterprise engagements across BFSI automation, RPA modernisation, and large-scale productivity transformation.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-org">Canarys Automation · BFSI Practice</div>
+          <h3>BFSI Process Automation — US Insurance Client</h3>
+        </div>
+        <div class="project-meta">
+          <span class="meta-badge">🏛 US Insurance Client</span>
+          <span class="meta-badge">🔧 Power Platform &amp; RPA</span>
+          <span class="meta-badge">⏱ 2026 · Ongoing</span>
+        </div>
+        <div class="project-body">
+          <p>Leading end-to-end delivery of a multi-phase enterprise automation program for a US insurance client, covering workflow automation and compliance reporting using Power Apps, Power Automate, and UiPath.</p>
+          <p>Serving as the primary delivery interface for international client stakeholders, conducting steering committee presentations and bridging business objectives with technical architecture decisions.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-org">Verizon · Fortune 500</div>
+          <h3>$25M Productivity Enablement Program</h3>
+        </div>
+        <div class="project-meta">
+          <span class="meta-badge">💰 $25M Budget</span>
+          <span class="meta-badge">👥 60 → 400+ Employees</span>
+          <span class="meta-badge">⏱ 5+ Years</span>
+        </div>
+        <div class="project-body">
+          <p>Directed Verizon's offshore delivery centre productivity transformation — governing scope, budget, vendors, and delivery milestones across 120+ applications. Built a repeatable enablement framework scaling the GCC from 60 to 400+ employees and 60+ vendor partners.</p>
+          <div class="impact-grid">
+            <div class="impact-cell"><span class="num">40%</span><span class="lbl">Faster Onboarding</span></div>
+            <div class="impact-cell"><span class="num">12%</span><span class="lbl">Cost Savings</span></div>
+            <div class="impact-cell"><span class="num">100%</span><span class="lbl">Timeline Adherence</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-org">Verizon · Fortune 500</div>
+          <h3>Enterprise Windows 10 Migration</h3>
+        </div>
+        <div class="project-meta">
+          <span class="meta-badge">👥 6,000+ Users</span>
+          <span class="meta-badge">⏱ 12 Months</span>
+          <span class="meta-badge">📍 India Delivery Centre</span>
+        </div>
+        <div class="project-body">
+          <p>Led mission-critical OS migration for 6,000+ India delivery centre users, orchestrating pilot waves, application compatibility testing across 100+ enterprise tools, and production readiness validation.</p>
+          <p>Achieved 100% timeline adherence with zero business disruption, eliminating security vulnerabilities while modernising the productivity environment.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-org">Verizon · Fortune 500</div>
+          <h3>Absence Reporting Centre (ARC) Transformation</h3>
+        </div>
+        <div class="project-meta">
+          <span class="meta-badge">👥 100,000+ Global Users</span>
+          <span class="meta-badge">⏱ 24 Months</span>
+          <span class="meta-badge">🌍 Global Rollout</span>
+        </div>
+        <div class="project-body">
+          <p>Supported PMO delivery for enterprise-wide absence management platform migration serving 100,000+ employees globally. Coordinated 15+ UAT cycles annually, ensured 100% regulatory compliance with FMLA and union agreements.</p>
+          <div class="impact-grid">
+            <div class="impact-cell"><span class="num">20%</span><span class="lbl">Fewer Defects</span></div>
+            <div class="impact-cell"><span class="num">40%</span><span class="lbl">Fewer Audit Findings</span></div>
+            <div class="impact-cell"><span class="num">25%</span><span class="lbl">Less Rework</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-org">Intellect Design Arena</div>
+          <h3>BFSI Origination Systems — Multi-Country</h3>
+        </div>
+        <div class="project-meta">
+          <span class="meta-badge">🌏 Thailand · Chile · Taiwan</span>
+          <span class="meta-badge">🏦 Loan &amp; Card Origination</span>
+          <span class="meta-badge">⏱ 2006–2007</span>
+        </div>
+        <div class="project-body">
+          <p>Played a pivotal role in delivering Loan Origination and Card Origination systems for TISCO Bank Thailand, Presto Cards Chile, and China Trust Commercial Bank Taiwan — ensuring 100% regulatory compliance across multi-country implementations.</p>
+          <div class="impact-grid">
+            <div class="impact-cell"><span class="num">25%</span><span class="lbl">Less UAT Rework</span></div>
+            <div class="impact-cell"><span class="num">30%</span><span class="lbl">Faster Approvals</span></div>
+            <div class="impact-cell"><span class="num">100%</span><span class="lbl">Compliance</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience-section">
+  <div class="section-inner">
+    <span class="section-kicker">Career Journey</span>
+    <div class="divider"></div>
+    <h2 class="section-heading">19+ Years of Progressive Leadership</h2>
+    <div class="timeline">
+
+      <div class="timeline-item current">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">February 2026 – Present</p>
+        <h3 class="timeline-role">Senior Project Manager</h3>
+        <p class="timeline-company">Canarys Automation Ltd · Bengaluru <span class="current-badge">Current Role</span></p>
+        <ul class="timeline-bullets">
+          <li>Leading end-to-end delivery of enterprise automation programs within the BFSI practice, managing concurrent RPA modernisation and Power Platform transformation engagements</li>
+          <li>Serving as the primary delivery interface for international client stakeholders — managing executive-level communications, status reporting, and risk escalations</li>
+          <li>Conducting sprint reviews, steering committee presentations, and milestone sign-off sessions with senior business and technology stakeholders</li>
+          <li>Managing delivery teams through structured RACI frameworks, KPI dashboards, and performance review cadences</li>
+          <li>Establishing project governance structures including risk registers, RAID logs, change control processes, and resource planning matrices</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">May 2016 – December 2025 &nbsp;·&nbsp; 9 years 8 months</p>
+        <h3 class="timeline-role">Consultant – Program &amp; Project Management</h3>
+        <p class="timeline-company">Verizon · Chennai</p>
+        <ul class="timeline-bullets">
+          <li>Directed $25M+ annual IT portfolios supporting 400+ employees and 60+ vendors with 98% success rate</li>
+          <li>Led 5+ year Productivity Enablement Program scaling GCC from 60 to 400+ employees across 120+ applications, cutting onboarding time by 40%</li>
+          <li>Established PMO governance frameworks improving delivery predictability by 30% and reducing project slippage by 35%</li>
+          <li>Built executive dashboards reducing C-suite decision-making turnaround by 25%</li>
+          <li>Managed 12% cost optimisation while maintaining 100% contractual and SLA compliance across 60+ vendor partners</li>
+          <li>Guided hybrid Agile–Waterfall teams to a 98% sprint completion rate, strengthening release predictability and stakeholder confidence</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">February 2008 – April 2016 &nbsp;·&nbsp; 8 years 3 months</p>
+        <h3 class="timeline-role">Business Analyst</h3>
+        <p class="timeline-company">Verizon · Chennai</p>
+        <ul class="timeline-bullets">
+          <li>Supported PMO delivery controls for initiatives impacting 100,000+ users globally, ensuring governance, reporting, and audit readiness</li>
+          <li>Coordinated 15+ UAT cycles annually, reducing post-release defects by 20%</li>
+          <li>Strengthened documentation and compliance processes, contributing to a 40% reduction in audit findings</li>
+          <li>Acted as a bridge between business and technology teams, reducing rework by 25%</li>
+        </ul>
+        <div class="timeline-projects">
+          <span class="proj-tag">Employee Self Service (VZESS)</span>
+          <span class="proj-tag">Absence Reporting Center (ARC)</span>
+          <span class="proj-tag">MidAtlantic Medical Restrictions (MMRP)</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">September 2006 – December 2007 &nbsp;·&nbsp; 1 year 4 months</p>
+        <h3 class="timeline-role">Business Analyst</h3>
+        <p class="timeline-company">Intellect Design Arena Ltd · Chennai</p>
+        <ul class="timeline-bullets">
+          <li>Captured requirements that led to a 25% reduction in UAT rework, enhancing project timelines</li>
+          <li>Streamlined workflows, achieving a 30% decrease in approval cycle times for financial processes</li>
+          <li>Ensured 100% compliance with regulatory standards across multi-country BFSI implementations</li>
+        </ul>
+        <div class="timeline-projects">
+          <span class="proj-tag">TISCO Bank Thailand – Loan Origination</span>
+          <span class="proj-tag">Presto Cards Chile – Card Origination</span>
+          <span class="proj-tag">China Trust Commercial Bank, Taipei</span>
+          <span class="proj-tag">Bajaj Auto Finance – DSI Payout</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">September 2003 – March 2004</p>
+        <h3 class="timeline-role">Client Service Executive</h3>
+        <p class="timeline-company">RBS · Chennai</p>
+        <ul class="timeline-bullets">
+          <li>Captured and analysed 30+ complex business and regulatory requirements for enterprise banking systems</li>
+          <li>Ensured 100% regulatory compliance across multi-country implementations</li>
+          <li>Achieved 30% reduction in approval cycle times through streamlined workflow design</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">February 2003 – June 2003</p>
+        <h3 class="timeline-role">Project Executive</h3>
+        <p class="timeline-company">Zoom Developers · Mumbai</p>
+        <ul class="timeline-bullets">
+          <li>Increased customer satisfaction scores by 20% through proactive engagement</li>
+          <li>Boosted digital banking adoption by 15%</li>
+          <li>Reduced complaint resolution time by 25% through improved coordination</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-period">November 1997 – February 1998</p>
+        <h3 class="timeline-role">Project Assistant</h3>
+        <p class="timeline-company">ANZ · Chennai</p>
+        <ul class="timeline-bullets">
+          <li>Supported PMO delivery in a regulated banking environment — documentation, reporting, and governance tracking</li>
+          <li>Contributed to 95%+ on-time milestone delivery through cross-functional stakeholder coordination</li>
+          <li>Standardised compliance and audit evidence, contributing to a 30% reduction in audit exceptions</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <span class="section-kicker">Credentials</span>
+    <div class="divider"></div>
+    <h2 class="section-heading">World-Class Certifications</h2>
+    <p class="section-lead">Industry-recognised credentials validating expertise across program management, agile delivery, and emerging technologies.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#fdf4e7">🏆</div>
+        <h3>PMP®</h3>
+        <p>Project Management Institute</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#e4f8f7">⚡</div>
+        <h3>Agile Scrum Master</h3>
+        <p>EXIN Certified</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#f0f4ff">📦</div>
+        <h3>PSPO I</h3>
+        <p>Professional Scrum Product Owner</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#fdf4e7">🎯</div>
+        <h3>ICP Agile Coach</h3>
+        <p>ICAgile Certified</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#e4f8f7">✨</div>
+        <h3>GenAI Engineering Mastermind</h3>
+        <p>Outskill Certified</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon" style="background:#e6f0fb">📱</div>
+        <h3>Digital Marketing Fundamentals</h3>
+        <p>Google Certified</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <h2>Let's create <em>impact</em><br>together</h2>
+      <p>Whether you're a client looking for enterprise automation delivery leadership, a BFSI organisation seeking a seasoned program manager, or a peer in the space — I'd love to connect.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-text">
+          <span>Email</span>
+          <a href="mailto:ppspriya@hotmail.com">ppspriya@hotmail.com</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📱</div>
+        <div class="contact-card-text">
+          <span>Phone</span>
+          <a href="tel:+919789972860">+91-9789972860</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🔗</div>
+        <div class="contact-card-text">
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/priya-pillai-pmp" target="_blank" rel="noopener">linkedin.com/in/priya-pillai-pmp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-text">
+          <span>Location</span>
+          <strong>Bengaluru, Karnataka, India</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Priya Pillai &nbsp;·&nbsp; Senior Project Manager &nbsp;·&nbsp; PMP® &nbsp;·&nbsp; Agile Scrum Master &nbsp;·&nbsp; ICP Agile Coach &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/priya-pillai-pmp">LinkedIn</a></p>
+</footer>
+
+<script>
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.borderBottomColor = window.scrollY > 60 ? 'rgba(14,184,176,0.12)' : 'rgba(255,255,255,0.05)';
+});
+</script>
 </body>
 </html>
