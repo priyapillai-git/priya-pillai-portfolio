@@ -140,6 +140,11 @@
   .hero{
     padding:80px 0 0;
     position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0; z-index:0;
     background-image:
       linear-gradient(90deg, rgba(15,42,74,.05) 1px, transparent 1px),
       linear-gradient(180deg, rgba(15,42,74,.05) 1px, transparent 1px);
@@ -147,8 +152,33 @@
     background-position:center top;
     -webkit-mask-image:linear-gradient(180deg, black 0%, black 55%, transparent 96%);
             mask-image:linear-gradient(180deg, black 0%, black 55%, transparent 96%);
+    pointer-events:none;
   }
-  .hero-inner{padding-bottom:64px;}
+  .hero-inner{position:relative; z-index:1; padding-bottom:64px; display:grid; grid-template-columns:1.35fr .9fr; gap:52px; align-items:start;}
+  @media (max-width:880px){ .hero-inner{grid-template-columns:1fr; gap:36px;} }
+
+  .hero-stats-card{
+    background:var(--card);
+    border:1px solid var(--line-strong);
+    border-top:3px solid var(--gold);
+    box-shadow:var(--shadow-md);
+    padding:26px 26px 20px;
+    margin-top:96px;
+  }
+  @media (max-width:880px){ .hero-stats-card{margin-top:0;} }
+  .stats-card-head{
+    font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--teal-deep); margin-bottom:6px; padding-bottom:16px; border-bottom:1px solid var(--line); font-weight:500;
+  }
+  .stat-block{display:flex; flex-direction:column;}
+  .stat-line{padding:16px 0; border-bottom:1px solid var(--line);}
+  .stat-line:last-child{border-bottom:none;}
+  .stat-line b{display:block; font-family:var(--display); font-size:34px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; line-height:1.15;}
+  .stat-line span{display:block; margin-top:4px; font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--slate-soft);}
+  .stats-card-foot{
+    margin-top:14px; padding-top:14px; border-top:1px solid var(--ink);
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--gold); text-align:center;
+  }
   .status-pill{
     display:inline-flex; align-items:center; gap:8px;
     font-family:var(--mono); font-size:11.5px; letter-spacing:.05em;
@@ -193,13 +223,6 @@
   .btn-ghost{border:1px solid var(--line-strong); color:var(--ink); background:var(--card);}
   .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px);}
 
-  .stat-row{display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--ink); padding-top:28px;}
-  @media (max-width:700px){ .stat-row{grid-template-columns:repeat(2,1fr); row-gap:28px;} }
-  .stat{border-left:1px solid var(--line); padding-left:20px;}
-  .stat:first-child{border-left:none; padding-left:0;}
-  @media (max-width:700px){ .stat:nth-child(odd){border-left:none; padding-left:0;} }
-  .stat b{display:block; font-family:var(--display); font-size:32px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums;}
-  .stat span{font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--slate-soft); text-transform:uppercase;}
 
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:72px; align-items:start; margin-top:40px;}
@@ -368,36 +391,42 @@
 
 <section class="hero">
   <div class="wrap hero-inner">
-    <div class="status-pill">Immediate Joiner · Open to PAN India Relocation</div>
-    <h1>Priya Pillai</h1>
-    <div class="role-line"><b>Business Analyst · Product Owner · Senior Project Manager</b> — PMP® · PSPO I</div>
+    <div class="hero-main">
+      <div class="status-pill">Immediate Joiner · Open to PAN India Relocation</div>
+      <h1>Priya Pillai</h1>
+      <div class="role-line"><b>Business Analyst · Product Owner · Senior Project Manager</b> — PMP® · PSPO I</div>
 
-    <div class="spectrum">
-      <div class="spectrum-track">
-        <div class="base"></div>
-        <div class="spectrum-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="spectrum-dots"><span class="d-ba"></span><span class="d-po"></span><span class="d-pm"></span></div>
+      <div class="spectrum">
+        <div class="spectrum-track">
+          <div class="base"></div>
+          <div class="spectrum-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="spectrum-dots"><span class="d-ba"></span><span class="d-po"></span><span class="d-pm"></span></div>
+        </div>
+        <div class="spectrum-labels">
+          <span><b>Business Analysis</b>2006 – 2016</span>
+          <span><b>Product Ownership</b>Backlog · Stories · AC</span>
+          <span><b>Program Delivery</b>2016 – Present</span>
+        </div>
       </div>
-      <div class="spectrum-labels">
-        <span><b>Business Analysis</b>2006 – 2016</span>
-        <span><b>Product Ownership</b>Backlog · Stories · AC</span>
-        <span><b>Program Delivery</b>2016 – Present</span>
+
+      <p class="lede">19+ years turning ambiguous business problems into delivered products — across BFSI, Insurance, and Telecom. I work the full arc from business analysis to product ownership to program delivery: eliciting and documenting requirements, owning the product backlog, writing user stories and acceptance criteria, and running the Agile ceremonies and governance frameworks that carry a product from requirement to go-live.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get in Touch →</a>
+        <a class="btn btn-ghost" href="#experience">View Experience</a>
       </div>
     </div>
 
-    <p class="lede">19+ years turning ambiguous business problems into delivered products — across BFSI, Insurance, and Telecom. I work the full arc from business analysis to product ownership to program delivery: eliciting and documenting requirements, owning the product backlog, writing user stories and acceptance criteria, and running the Agile ceremonies and governance frameworks that carry a product from requirement to go-live.</p>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#contact">Get in Touch →</a>
-      <a class="btn btn-ghost" href="#experience">View Experience</a>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat"><b data-count="19" data-suffix="+">0</b><span>Years Experience</span></div>
-      <div class="stat"><b data-count="25" data-prefix="$" data-suffix="M+">0</b><span>Portfolios Directed</span></div>
-      <div class="stat"><b data-count="98" data-suffix="%">0</b><span>Sprint Completion Rate</span></div>
-      <div class="stat"><b data-count="400" data-suffix="+">0</b><span>Resources Led</span></div>
-    </div>
+    <aside class="hero-stats-card">
+      <div class="stats-card-head">At a Glance</div>
+      <div class="stat-block">
+        <div class="stat-line"><b data-count="19" data-suffix="+">0</b><span>Years Experience</span></div>
+        <div class="stat-line"><b data-count="25" data-prefix="$" data-suffix="M+">0</b><span>Portfolios Directed</span></div>
+        <div class="stat-line"><b data-count="98" data-suffix="%">0</b><span>Sprint Completion Rate</span></div>
+        <div class="stat-line"><b data-count="400" data-suffix="+">0</b><span>Resources Led</span></div>
+      </div>
+      <div class="stats-card-foot">Immediate Joiner · PAN India</div>
+</aside>
   </div>
 </section>
 
